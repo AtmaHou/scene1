@@ -73,7 +73,7 @@ def homepage(request):
         return render_to_response("search_result.html", {"book_list": book_list, "author": auth})
     return render_to_response("home.html")
 
-
+# change "3"
 def update(request):
     I = request.GET["title"]
     book = Book.objects.filter(ISBN=I)

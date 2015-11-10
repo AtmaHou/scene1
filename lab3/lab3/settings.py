@@ -1,5 +1,5 @@
 # Django settings for lab3 project.
-
+# change "2"
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
