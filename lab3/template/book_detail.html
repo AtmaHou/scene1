@@ -1,0 +1,124 @@
+﻿<html>
+	<head>
+		<title>Book Detail</title>
+        <style>
+
+@charset "UTF-8";
+
+html, body{
+	padding:0;
+	margin:0;
+	position:relative;
+	background-repeat:repeat;
+	color:#fff;
+	letter-spacing:1px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+body {background-color: rgba(0, 0, 0, 0.65)
+}
+a:link {color: rgba(249, 255, 253, 0.96);}
+a:visited {color: #e9c293;}
+a:hover {color: #fffa94;}
+
+#container{
+	padding-top:20px;
+	width:960px;
+	margin:0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	width:100%;
+	-webkit-box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+    box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+}
+
+.zebra {
+    border: 1px solid #555;
+}
+
+.zebra td {
+    border-left: 1px solid #555;
+    border-top: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+.zebra th, .zebra th:hover {
+    border-left: 1px solid #555;
+	border-bottom: 1px solid #828282;
+    padding: 20px;
+    background-color:#151515 !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#404040)) !important;
+    background-image: -webkit-linear-gradient(top, #151515, #404040) !important;
+    background-image:    -moz-linear-gradient(top, #151515, #404040) !important;
+    background-image:     -ms-linear-gradient(top, #151515, #404040) !important;
+    background-image:      -o-linear-gradient(top, #151515, #404040) !important;
+    background-image:         linear-gradient(top, #151515, #404040) !important;
+	color:#fff !important;
+	font-weight:normal;
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #000 !important;
+	color:#fff;
+}
+
+.zebra tr:hover *{
+    background: #eeeeee;
+	color:#000;
+}
+
+.zebra tr {
+	background:#404040;
+	color:#fff;
+}
+</style>
+	</head>
+	<body>
+        <div id="container">
+        <h1 align = "center"  >Book Detail</h1>
+        <table class = "zebra">
+            <tr>
+                <td>ISBN"</td>
+                <td>Title</td>
+                <td>AuthorID</td>
+                <td>Publisher</td>
+                <td>PublishDate</td>
+                <td>Price</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>{{a.ISBN}}</td>
+                <td>{{a.Title}}</td>
+                <td>{{a.AuthorID.Name}}</td>
+                <td>{{a.Publisher}}</td>
+                <td>{{a.PublishDate}}</td>
+                <td>{{a.Price}}</td>
+                <td><a href="/home/?delete={{a.ISBN}}">Delete</a></td>
+                <td><a href="/update/?title={{ a.ISBN }}"> Edit </a></td>
+            </tr>
+        </table>
+        <h1 align = "center">Author Imformation</h1>
+        <table class = "zebra">
+            <tr>
+                <td>AuthorID</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Country</td>
+            </tr>
+            <tr>
+                <td>{{author.AuthorID}}</td>
+                <td>{{author.Name}}</td>
+                <td>{{author.Age}}</td>
+                <td>{{author.Country}}</td>
+            </tr>
+        </table>
+        </div>
+        <div align ="center">
+            <a href = "/home/?search={{ a.AuthorID.Name }}">Back</a>
+        </div>
+	</body>
+</html>

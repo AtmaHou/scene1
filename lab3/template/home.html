@@ -1,0 +1,45 @@
+﻿<html>
+	<head>
+		<title>Home</title>
+        <style>
+
+        @charset "UTF-8";
+
+        html, body{
+            padding:0;
+            margin:0;
+            position:relative;
+            background-repeat:repeat;
+            color:#fff;
+            letter-spacing:1px;
+            font-family:Georgia, "Times New Roman", Times, serif;
+        }
+        body {background-color: rgba(0, 0, 0, 0.79)
+        }
+        #head {font-size : 80px;}
+        a:link {color: rgba(249, 255, 253, 0.96);}
+        a:visited {color: #e9c293;}
+        a:hover {color: #fffa94;}
+        #container{
+            padding-top:20px;
+            width:960px;
+            margin:0 auto;
+        }
+        </style>
+	</head>
+	<body>
+    <div id="container">
+		<h1 align="center" id = "head"><b>Book Bay</b></h1>
+		<form method="POST">
+            <table align="center" border=0>
+                <tr>
+                    <td><input name = "search" type="text"></td><td><input type="submit" value="Search Author"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div align = "center">
+        <a href="/add_book/" >Add New Book</a>
+    </div>
+	</body>
+</html>
